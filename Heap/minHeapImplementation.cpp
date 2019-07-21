@@ -1,7 +1,6 @@
 #include <iostream>
 #include "heap.h"
 
-//TODO: "1) Improve error message 2) "
 void swap(int* num_1, int* num_2) {
     int temp = *num_1;
     *num_1 = *num_2;
@@ -66,9 +65,7 @@ void MinHeap::delete_key(int index) {
         std::cout << "Stack underflow 03MH-E>" << "Heap Empty:: Add some elements before delete operation" << std::endl;
         return;
     }
-std::cout << "Enter here 1 " << std::endl;
     update_key(index, INT_MIN);
-std::cout << "Enter here 2 " << std::endl;
     extract_min();
 }
 
@@ -121,9 +118,10 @@ int main()
     h.insert(5); 
     h.insert(4); 
     h.insert(45); 
-    std::cout << h.extract_min() << " "; 
-    std::cout << h.get_min() << " "; 
+    std::cout << "Operation::Extract Min : " << h.extract_min() << std::endl; 
+    std::cout << "Operation::Get Min Value in Heap : " << h.get_min() << std::endl; 
+    std::cout << "Operation::Update heap key 2 with value 1" << std::endl; 
     h.update_key(2, 1); 
-    std::cout << h.get_min(); 
+    std::cout << "Operation::Get Min value in Heap : "<< h.get_min() << std::endl; 
     return 0; 
 }
